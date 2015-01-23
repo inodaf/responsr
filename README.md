@@ -1,2 +1,2 @@
 # Responsr
-##### A simple tool for responsive layouts.
+##### A faster tool for responsive layouts.
