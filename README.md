@@ -7,11 +7,9 @@
 
 #### How to Install:
 
-1. Install (Full project)
-    - [Download from GitHub](https://github.com/isacfadoni/responsr/archive/master.zip)
+1. [Download](https://github.com/isacfadoni/responsr/archive/master.zip) the project from GitHub.
   
-2. Place all the downloaded content in any folder you want:
-    - `E.g.: C://www/responsr`
+2. Place all the downloaded content in any folder you want `E.g.: C://www/responsr`.
 
 3. In your browser, type `localhost/responsr` or drag the `index.html` file to him.
 
