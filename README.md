@@ -3,7 +3,7 @@
 
 > Notes: iFrames doesn't allow `https://` pages. Responsr is currently in (BETA).
 
-#### [Demo](isacfadoni.github.io/responsr)
+#### [Demo](http://isacfadoni.github.io/responsr)
 
 #### How to Install:
 
