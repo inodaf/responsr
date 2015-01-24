@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="css/main.css"/>
+		<link rel="stylesheet" href="css/font-awesome.min.css"/>
+		<script src="js/vendor/jquery-2.1.1.min.js"></script>
+		<script src="js/responsr.js"></script>
+		<title>Responsr - A fast tool for responsive layouts.</title>
+	</head>
+	<body>
+		<header id="main-header">
+			<div class="wrap">
+				<input type="text" id="url" class="input" placeholder="Type a URL or localhost..."><span class="input" id="go" title="Click to view!"><i class="fa fa-arrow-right"></i></span>
+			</div>
+		</header>
+		<main role="main">
+			<div class="wrap">
+				<div>
+					<iframe src="" id="display"></iframe>
+				</div>
+			</div>
+		</main>
+		<section id="devices-container">
+			<h2>Devices</h2>
+			<ul id="devices">
+				<li data-device-width="333" data-device-height="506" title="iPhone 5"><img src="images/devices/iphone5.png" alt=""/></li>
+				<li data-device-width="414" data-device-height="674" title="iPhone 6"><img src="images/devices/iphone6.png" alt=""/></li>
+				<li data-device-width="768" data-device-height="1024" title="iPad"><img src="images/devices/ipad.png" alt=""/></li>
+				<li data-device-width="384" data-device-height="600" title="Nexus 4"><img src="images/devices/nexus.png" alt=""/></li>
+			</ul>
+			<div class="wrap">
+				<div>
+					<span title="Toggle Landscape" id="landscape"><i class="fa fa-undo"></i></span>
+					<!--<input type="number" id="customwidth" class="input">
+						<span><i class="fa fa-link"></i></span>
+						<input type="number" id="customheight" class="input">
+					-->
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
