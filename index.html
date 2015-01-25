@@ -10,9 +10,33 @@
 	</head>
 	<body>
 		<header id="main-header">
-			<div class="wrap">
-				<input type="text" id="url" class="input" placeholder="Type a URL or localhost..."><span class="input" id="go" title="Click to view!"><i class="fa fa-arrow-right"></i></span>
-			</div>
+			<input type="text" id="url" class="input" placeholder="Type a URL or localhost...">
+
+			<!-- Smartphone -->
+			<span class="button" title="Select a smartphone"><i class="fa fa-mobile fa-lg"></i>
+			<ul>
+				<li>iOS
+					<ul>
+						<li data-device-width="333" data-device-height="506">iPhone 5</li>
+						<li data-device-width="375" data-device-height="668">iPhone 6</li>
+					</ul>
+				</li>
+			</ul>
+			</span>
+
+			<!-- Tablets -->
+			<span class="button" title="Select a tablet"><i class="fa fa-tablet fa-lg"></i>
+			<ul>
+				<li>iOS
+					<ul>
+						<li data-device-width="770" data-device-height="932">iPad</li>
+					</ul>
+				</li>
+			</ul>
+			</span>
+
+			<span class="button" id="landscape" title="Toggle landscape mode"><i class="fa fa-undo"></i></span>
+			<span class="input" id="go" title="Click to view!"><i class="fa fa-arrow-right"></i></span>
 		</header>
 		<main role="main">
 			<div class="wrap">
@@ -21,23 +45,5 @@
 				</div>
 			</div>
 		</main>
-		<section id="devices-container">
-			<h2>Devices</h2>
-			<ul id="devices">
-				<li data-device-width="333" data-device-height="506" title="iPhone 5"><img src="images/devices/iphone5.png" alt=""/></li>
-				<li data-device-width="414" data-device-height="674" title="iPhone 6"><img src="images/devices/iphone6.png" alt=""/></li>
-				<li data-device-width="768" data-device-height="1024" title="iPad"><img src="images/devices/ipad.png" alt=""/></li>
-				<li data-device-width="384" data-device-height="600" title="Nexus 4"><img src="images/devices/nexus.png" alt=""/></li>
-			</ul>
-			<div class="wrap">
-				<div>
-					<span title="Toggle Landscape" id="landscape"><i class="fa fa-undo"></i></span>
-					<!--<input type="number" id="customwidth" class="input">
-						<span><i class="fa fa-link"></i></span>
-						<input type="number" id="customheight" class="input">
-					-->
-				</div>
-			</div>
-		</section>
 	</body>
 </html>

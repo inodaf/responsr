@@ -11,14 +11,10 @@
  */
 
 $(function responsrMain() {
-	device = $('#devices li');
+	device = $('.button ul li ul li');
 	display = $('#display');
 	landscape = $('#landscape');
 	url = $('#url');
-
-	customWidth = $("#customwidth").val();
-	customHeight = $("#customheight").val();
-
 	  
 	url.on('change', function() {
 		display.attr('src', url.val());
