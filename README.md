@@ -8,7 +8,7 @@
 
 ##### Contribute
 
-Please contribute with the project by adding new screen resolution in the HTML, is simple:
+Please contribute with the project by adding new screen resolution in the HTML, it's simple:
 
 ```HTML
   <ul>
