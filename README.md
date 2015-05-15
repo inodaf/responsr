@@ -3,7 +3,7 @@
 
 > Notes: The `iframe` element doesn't allow `https://` pages.
 
-#### [Demo](http://isacfadoni.github.io/responsr) | [Download](https://github.com/isacfadoni/responsr/archive/v0.5.zip)
+#### [Demo](http://isacfadoni.github.io/Responsr) | [Download](https://github.com/isacfadoni/Responsr/archive/v0.5.zip)
 
 
 ##### Contribute
