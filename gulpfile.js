@@ -25,3 +25,9 @@ gulp.task('sass', () => {
     .pipe(gulp.dest('./dist/css'))
   ;
 });
+
+
+// # WATCHER: Scripts
+gulp.task('scripts:watch', () => {
+  gulp.watch('./js/**/*.js', ['scripts']);
+});
