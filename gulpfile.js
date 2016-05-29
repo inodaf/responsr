@@ -1,3 +1,4 @@
+// Require Gulp Modules
 var gulp = require('gulp')
   , sass = require('gulp-sass')
   , concat = require('gulp-concat')
@@ -31,3 +32,13 @@ gulp.task('sass', () => {
 gulp.task('scripts:watch', () => {
   gulp.watch('./js/**/*.js', ['scripts']);
 });
+
+
+// # WATCHER: Sass
+gulp.task('sass:watch', () => {
+  gulp.watch('./sass/**/*.sass', ['sass']);
+});
+
+
+// Gulp Default
+gulp.task('default', ['scripts:watch', 'sass:watch']);
