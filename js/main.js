@@ -1,7 +1,7 @@
 /*
  * Project: Responsr.
  * Description: A simple tool for testing responsive layouts.
- * Last Update: 2016/04/28
+ * Last Update: 2016/04/29
  *
  * Author: Isac Fadoni
  * GitHub: https://github.com/isacfadoni/responsr.app
@@ -24,6 +24,7 @@ var Responsr = Responsr || {};
   ;
 
   Responsr.initialize = () => {
+    Responsr.loadDeviceList();
     Responsr.addEventListeners();
   };
 
@@ -47,6 +48,31 @@ var Responsr = Responsr || {};
     }, false);
   };
 
+  Responsr.getDevices = (callback) => {
+    var dbReq = new XMLHttpRequest()
+      , pathName = window.location.pathname
+      , pathIndex = pathName.lastIndexOf('/')
+      , rootPath = pathName.slice(0, pathIndex)
+      , deviceList = null
+    ;
+
+    dbReq.open('GET', `${rootPath}devices_db/devices.json`);
+
+    dbReq.addEventListener('load', () => {
+      deviceList = JSON.parse(dbReq.responseText);
+      callback(deviceList);
+    }, false);
+
+    dbReq.send();
+  };
+
+  Responsr.renderDeviceList = (json) => {
+    console.log(json);
+  };
+
+  Responsr.loadDeviceList = () => {
+    Responsr.getDevices(Responsr.renderDeviceList);
+  };
 
   return {
     initialize: Responsr.initialize()
