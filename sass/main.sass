@@ -11,7 +11,7 @@
  * Compiler: node-sass
  *
  * Sass URL: http://sass-lang.com
- * Compiler Package URL: https://www.npmjs.com/package/node-sass
+ * Compiler Package URL: https://www.npmjs.com/package/node-sass */
 
 
 
@@ -38,46 +38,18 @@
 
 
 // Basic
+html
+  height: 100%
+
+
 body
-    background: #fff
-
-.wrap
-    position: absolute
-    display: block
-    min-width: 340px
-    padding: 5px
-    box-sizing: border-box
+  background: #fff
+  height: inherit
 
 
-
-.input
-    position: relative
-    display: block
-    height: 40px
-    padding: 5px
-    border: none
-    box-sizing: border-box
-    background: #fff
-    font-family: $font-face
-    font-weight: 500
-
-    &#url
-        width: 300px
-        float: left
-        border-right: 1px solid #eee
-
-    &#go
-        width: 40px
-        float: right
-        text-align: center
-        cursor: pointer
-        color: #fff
-        background: $background
-        +transition(all .2s ease-in-out)
-
-        i
-            position: absolute
-            +center("both")
-
-        &:hover
-            background: lighten($background, 20%)
+// Main Content
+.main-content
+  display: flex
+  justify-content: center
+  align-items: center
+  height: calc(100% - 64px)
