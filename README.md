@@ -1,5 +1,5 @@
 # Responsr
-##### A fast tool for testing responsive layouts.
+##### A tiny tool for testing responsive layouts.
 
 
 #### [Demo](http://isacfadoni.github.io/Responsr) | [Download](https://github.com/isacfadoni/Responsr/archive/v0.5.zip)
