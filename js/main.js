@@ -9,44 +9,50 @@
  *
  */
 
-;(function () {
+
+var Responsr = Responsr || {};
+
+;(function (field, display) {
 
   'use strict';
 
-
-  // # TODO: Vanillafy the app
-  var display = document.getElementById('display')
-    , landscape = document.getElementById('landscape')
-    , url = document.getElementById('url')
+  var urlField = document.getElementById(field)
+    , displayContent = document.getElementById(display)
+    , urlFieldValue = null
+    , hasLocalhost = null
+    , hasHttp = null
   ;
 
-})();
+  Responsr.initialize = () => {
+    Responsr.addEventListeners();
+  };
 
-$(function responsrMain() {
-	device = $('.button ul li ul li');
-	display = $('#display');
-	landscape = $('#landscape');
-	url = $('#url');
+  Responsr.fillDisplay = () => {
+    urlFieldValue = urlField.value;
 
-	url.on('change', function() {
-		display.attr('src', url.val());
+    hasLocalhost = urlFieldValue.includes('localhost');
+    hasHttp = urlFieldValue.includes('http://');
 
-		if(url.val().contains('localhost') || url.val().contains('http://') === false ) {
-			display.attr('src', 'http://' + url.val());
-		}
+    if (hasLocalhost || !hasHttp) displayContent.src = `http://${urlFieldValue}`;
+  };
 
-		if(url.val().length === 0) {
-			display.attr('src', '');
-		}
+  Responsr.clearDisplay = () => {
+    if (urlFieldValue.length === 0) displayContent.src = '';
+  };
 
-	});
+  Responsr.addEventListeners = () => {
+    urlField.addEventListener('change', () => {
+      Responsr.fillDisplay();
+      Responsr.clearDisplay();
+    }, false);
+  };
 
-	device.on('click', function() {
-		display.css({'width': $(this).attr("data-device-width") + 'px', 'height': $(this).attr("data-device-height") + 'px'});
-	});
 
-	landscape.on('click', function() {
-		display.css({'width': display.height(), 'height': display.width()})
-	});
+  return {
+    initialize: Responsr.initialize()
+  };
 
-});
+})('urlField', 'displayContent');
+
+
+var app = Responsr.initialize;
