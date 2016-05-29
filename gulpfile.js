@@ -5,6 +5,7 @@ var gulp = require('gulp')
   , concat = require('gulp-concat')
   , rename = require('gulp-rename')
   , uglify = require('gulp-uglify')
+  , webserver = require('gulp-webserver')
 ;
 
 
@@ -42,5 +43,15 @@ gulp.task('sass:watch', () => {
 });
 
 
+// # SERVER: App
+gulp.task('webserver', () => {
+  gulp.src('./')
+    .pipe(webserver({
+      livereload: true,
+      open: true
+    }));
+});
+
+
 // Gulp Default
-gulp.task('default', ['scripts:watch', 'sass:watch']);
+gulp.task('default', ['scripts:watch', 'sass:watch', 'webserver']);
