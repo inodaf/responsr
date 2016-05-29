@@ -1,7 +1,6 @@
 # Responsr
-##### A fast tool for responsive layouts.
+##### A fast tool for testing responsive layouts.
 
-> Notes: The `iframe` element doesn't allow `https://` pages.
 
 #### [Demo](http://isacfadoni.github.io/Responsr) | [Download](https://github.com/isacfadoni/Responsr/archive/v0.5.zip)
 
