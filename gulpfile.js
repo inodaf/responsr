@@ -15,3 +15,13 @@ gulp.task('scripts', () => {
     .pipe(gulp.dest('./dist/js'))
   ;
 });
+
+
+// # TASK: Sass
+gulp.task('sass', () => {
+  return gulp.src('./sass/**/*.sass')
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('./dist/css'))
+  ;
+});
