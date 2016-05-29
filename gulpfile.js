@@ -1,6 +1,7 @@
 // Require Gulp Modules
 var gulp = require('gulp')
   , sass = require('gulp-sass')
+  , babel = require('gulp-babel')
   , concat = require('gulp-concat')
   , rename = require('gulp-rename')
   , uglify = require('gulp-uglify')
@@ -10,9 +11,10 @@ var gulp = require('gulp')
 // # TASK: Scripts
 gulp.task('scripts', () => {
   return gulp.src(['./js/**/*.js', '!./js/vendor/**/*.js'])
+    .pipe(babel({presets: ['es2015']}))
     .pipe(concat('main.js'))
     .pipe(uglify())
-    .pipe(rename({sufix: '.min'}))
+    .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('./dist/js'))
   ;
 });
