@@ -1,29 +1,37 @@
 /*
  * Project: Responsr.
- * Description: A simple tool for responsive layouts.
- * Last Update: 2015/01/19
+ * Description: A simple tool for testing responsive layouts.
+ * Last Update: 2016/05/28
  *
  * Author: Isac Fadoni
- * GitHub: https://github.com/isacfadoni/responsr
+ * GitHub: https://github.com/isacfadoni/responsr.app
  * Copyright: You can use or edit this code under the MIT license.
  *
  * Preprocessor: Sass
- * Compiler: Koala
+ * Compiler: Libsass
  * Sass URL: http://sass-lang.com
- * Koala URL: http://koala-app.com
 
-/* Imports */
-@import reset
-@import fonts
-@import transition
-@import centralize
-@import colorscheme
-    
-    
-/* Basic */
+
+
+// Variables Imports
+@import variables/colorscheme
+
+// Vendor Imports
+@import vendor/reset
+
+// Fonts Imports
+@import fonts/roboto
+
+// Mixins Imports
+@import mixins/transition
+@import mixins/centralize
+
+
+
+// Basic
 body
     background: #fff
-  
+
 .wrap
     position: absolute
     display: block
@@ -31,9 +39,10 @@ body
     padding: 5px
     box-sizing: border-box
     +center("x")
-    
-    
-/* Responsr - Default iPhone 5 / 320 x 506 */
+
+
+
+// Responsr - Default iPhone 5 / 320 x 506
 #display
     position: relative
     display: block
