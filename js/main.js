@@ -12,12 +12,13 @@
 
 var Responsr = Responsr || {};
 
-;(function (field, display) {
+;(function (field, display, listContainer) {
 
   'use strict';
 
   var urlField = document.getElementById(field)
     , displayContent = document.getElementById(display)
+    , navDrawer = document.getElementById(listContainer)
     , urlFieldValue = null
     , hasLocalhost = null
     , hasHttp = null
@@ -66,19 +67,33 @@ var Responsr = Responsr || {};
     dbReq.send();
   };
 
-  Responsr.renderDeviceList = (json) => {
-    console.log(json);
+  Responsr.renderDeviceList = (db) => {
+    for (var devices in db) {
+      if (db.hasOwnProperty(devices)) {
+        var all = db[devices]
+        var smartphones = all.Smartphones;
+        var tablets = all.Tablets;
+        var laptops = all.Laptops;
+
+        // # TODO
+        Responsr.createListItem('');
+      }
+    };
   };
 
   Responsr.loadDeviceList = () => {
     Responsr.getDevices(Responsr.renderDeviceList);
   };
 
+  Responsr.createListItem = () => {
+    // # TODO
+  };
+
   return {
     initialize: Responsr.initialize()
   };
 
-})('urlField', 'displayContent');
+})('urlField', 'displayContent', 'navDrawer');
 
 
 var app = Responsr.initialize;
