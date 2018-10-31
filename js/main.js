@@ -49,40 +49,16 @@ var Responsr = Responsr || {};
     }, false);
   };
 
-  Responsr.getDevices = (callback) => {
-    var dbReq = new XMLHttpRequest()
-      , pathName = window.location.pathname
-      , pathIndex = pathName.lastIndexOf('/')
-      , rootPath = pathName.slice(0, pathIndex)
-      , deviceList = null
-    ;
-
-    dbReq.open('GET', `${rootPath}devices_db/devices.json`);
-
-    dbReq.addEventListener('load', () => {
-      deviceList = JSON.parse(dbReq.responseText);
-      callback(deviceList);
-    }, false);
-
-    dbReq.send();
+  Responsr.getDevices = () => {
+    return fetch(`/devices_db/devices.json`).then(r => r.json())
   };
 
   Responsr.renderDeviceList = (db) => {
-    for (var devices in db) {
-      if (db.hasOwnProperty(devices)) {
-        var all = db[devices]
-        var smartphones = all.Smartphones;
-        var tablets = all.Tablets;
-        var laptops = all.Laptops;
 
-        // # TODO
-        Responsr.createListItem('');
-      }
-    };
   };
 
   Responsr.loadDeviceList = () => {
-    Responsr.getDevices(Responsr.renderDeviceList);
+    Responsr.getDevices().then(console.log);
   };
 
   Responsr.createListItem = () => {
