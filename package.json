@@ -1,0 +1,31 @@
+{
+  "name": "responsr",
+  "version": "0.2.0",
+  "description": "A tiny tool for testing responsive layouts.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "7.1.2",
+    "babel-preset-es2015": "6.24.1",
+    "gulp": "^3.9.1",
+    "gulp-sass": "4.0.2",
+    "gulp-babel": "8.0.0",
+    "gulp-concat": "2.6.1",
+    "gulp-rename": "1.4.0",
+    "gulp-uglify": "3.0.1",
+    "gulp-webserver": "0.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inodaf/responsr.app.git"
+  },
+  "author": "Isac Fadoni",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/inodaf/responsr.app/issues"
+  },
+  "homepage": "https://github.com/inodaf/responsr.app#readme"
+}
