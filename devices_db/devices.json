@@ -1,21 +1,12 @@
 {
-  "devices": {
-
-    "Smartphones": {
-      "Galaxy S5": ["360", "640"],
-      "Nexus 5X": ["411", "731"],
-      "Nexus 6P": ["435", "773"],
-      "iPhone 5": ["320", "568"],
-      "iPhone 6": ["375", "667"],
-      "iPhone 6 Plus": ["414", "736"]
-    },
-
-    "Tablets": {
-      "iPad": ["768", "1024"]
-    },
-
-    "Laptops": {
-      "MacBook": ["1366", "768"]
-    }
-  }
+  "smartphones": [
+    { "device": "Samsung Galaxy S9+", "dimensions": ["360", "640"] },
+    { "device": "Apple iPhone XS Max", "dimensions": ["360", "640"] }
+  ],
+  "tablets": [
+    { "device": "Apple iPad", "dimensions": ["768", "1024"] }
+  ],
+  "laptops": [
+    { "device": "Apple MacBook Pro 13\"", "dimensions": ["1366", "768"] }
+  ]
 }
